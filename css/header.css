@@ -1,0 +1,107 @@
+header {
+    width: 100%;
+    min-width: 100%;
+    min-width: 100%;
+    min-height: 210px;
+    background-image: url("./../img/header-img.webp");
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    transform-style: preserve-3d;
+    background-attachment: fixed;
+    background-position: center;
+}
+header .small-heading {
+    font-size: 24px;
+    margin-top: 15%;
+}
+header .main-heading {
+    font-size: 45px;
+    margin-top: 55px;
+}
+header .main-heading__wrap-tag {
+    display: none;
+}
+header .desc {
+    justify-self: center;
+    width: 50%;
+    font-size: 26px;
+    margin-top: 55px;
+    text-align: center;
+}
+@media (max-width: 1200px) {
+    header .small-heading {
+        margin-top: 10%;
+        font-size: 20px;
+    }
+    header .main-heading {
+        font-size: 36px;
+    }
+    header .desc {
+        font-size: 20px;
+    }
+}
+@media (max-width: 855px) {
+    header .desc {
+        width: 90%;
+    }
+}
+@media (max-width: 755px) {
+    header .small-heading {
+        margin-top: 5%;
+    }
+    header .main-heading {
+        font-size: 30px;
+    }
+    header .desc {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    header .small-heading {
+        margin-bottom: -5%;
+    }
+    header .main-heading {
+        text-align: center;
+    }
+    header .main-heading__wrap-tag {
+        display: inline;
+    }
+    header .desc {
+        margin-top: 35px;
+    }
+}
+@media (max-width: 550px) {
+    header .small-heading {
+        font-size: 16px;
+    }
+    header .main-heading {
+        margin-top: 55px;
+        font-size: 24px;
+    }
+    header .desc {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 470px) {
+    header .main-heading {
+        margin-top: 35px;
+    }
+}
+@media (max-width: 450px) {
+    header .small-heading {
+        font-size: 14px;
+    }
+    header .main-heading {
+        margin-top: 35px;
+        font-size: 20px;
+    }
+    header .desc {
+        font-size: 12px;
+    }
+}
