@@ -12,32 +12,49 @@ body {
     perspective: 1px;
     transform-style: preserve-3d;
 }
-.about-idol {
+/* Анимация при загрузке страницы (preloader) */
+.wow {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: opacity 1s linear, transform 1s linear;
+}
+.animated {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 1s linear, transform 1s linear;
+}
+.about-idol, .about-author {
     margin-top: 25px;
 }
-.about-idol__heading {
+.about-idol__heading, .about-author__heading {
     text-align: center;
     color: #000;
     font-size: 36px;
 }
-.idol-info__container {
+.idol-info__container, .author-info__container {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 55px;
     margin-top: 55px;
 }
-.idol-info__img {
+.idol-info__img, .author-info__img {
     align-self: center;
     flex-grow: 1;
 }
 .idol-info__img img {
     width: 1200px;
-    border: none;
-    border-radius: 50%;
     margin-left: 155px;
 }
-.idol-info__text {
+.author-info__img img {
+    width: 450px;
+    margin-left: 255px;
+}
+.idol-info__img img, .author-info__img img {
+    border: none;
+    border-radius: 50%;
+}
+.idol-info__text, .author-info__text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,10 +62,10 @@ body {
     row-gap: 25px;
     color: #000;
 }
-.idol-info__heading {
+.idol-info__heading, .author-info__heading {
     font-size: 30px;
 }
-.idol-info__desc {
+.idol-info__desc, .author-info__desc {
     width: 50%;
     font-size: 20px;
 }
@@ -76,6 +93,98 @@ body {
     color: #fff;
     font-size: 25px;
 }
+.for-what {
+    margin-top: 55px;
+}
+.for-what__heading {
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+}
+.for-what__cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+.for-what-card {
+    width: 475px;
+    height: fit-content;
+    border: 1px dotted #000;
+    border-radius: 10px;
+    padding-bottom: 25px;
+    transition: background-color 0.25s linear, color 0.25s linear;
+}
+.for-what-card:hover {
+    border: 1px dotted #fff;
+    background-color: rgb(236, 236, 91);
+    color: #fff;
+    cursor: pointer;
+}
+.for-what-card__heading {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.for-what-card__text-container {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.for-what-card__text-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+}
+footer {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: #1e1c3d;
+    color: #fff;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    row-gap: 25px;
+}
+.footer-main-heading {
+    font-size: 26px;
+}
+.footer-socials {
+    font-size: 18.5px;
+}
+.footer-socials__strong-text {
+    font-size: 20px;
+}
+.footer-socials__strong-text:hover {
+    border-bottom: 1px solid #00f;
+}
+@media (max-width: 1640px) {
+    .for-what__cards-container {
+        gap: 30px;
+    }
+}
+@media (max-width: 1500px) {
+    .for-what__cards-container {
+        gap: 15px;
+    }
+}
+@media (max-width: 1454px) {
+    .for-what__cards-container {
+        gap: 55px;
+    }
+}
+@media (max-width: 1224px) {
+    .author-info__img img {
+        margin-left: 55px;
+    }
+}
 @media (max-width: 1100px) {
     .idol-info__container {
         column-gap: 155px;
@@ -83,10 +192,23 @@ body {
     .idol-info__img img {
         width: 1500px;
     }
+    .author-info__img img {
+        width: 900px;
+    }
 }
 @media (max-width: 1050px) {
-    .idol-info__desc {
+    .idol-info__desc, .author-info__desc {
         width: 80%;
+    }
+    .for-what__cards-container {
+        gap: 15px;
+    }
+}
+@media (max-width: 1000px) {
+    .for-what__cards-container {
+        flex-direction: column;
+        margin-top: 35px;
+        row-gap: 25px;
     }
 }
 @media (max-width: 900px) {
@@ -117,15 +239,15 @@ body {
     }
 }
 @media (max-width: 730px) {
-    .idol-info__container {
+    .idol-info__container, .author-info__container {
         flex-direction: column;
         align-items: center;
     }
-    .idol-info__img img {
+    .idol-info__img img, .author-info__img img {
         margin-left: 0;
         width: 300px;
     }
-    .idol-info__text {
+    .idol-info__text, .author-info__text {
         margin: 55px 0;
     }
     .idol-info__heading {
@@ -134,6 +256,17 @@ body {
     .idol-info__desc {
         margin-left: 0;
         width: 95%;
+    }
+    .author-info__desc {
+        width: 80%;
+    }
+}
+@media (max-width: 500px) {
+    .author-info__img img {
+        width: 200px;
+    }
+    .for-what-card {
+        width: 300px;
     }
 }
 @media (max-width: 455px) {
