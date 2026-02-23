@@ -95,6 +95,11 @@ body {
     color: #fff;
     font-size: 25px;
 }
+.video__wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
 .for-what {
     margin-top: 55px;
 }
@@ -140,32 +145,6 @@ body {
 .for-what-card__text-paragraph {
     font-size: 16px;
     font-weight: 500;
-}
-footer {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    background-color: #1e1c3d;
-    color: #fff;
-    margin-top: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    row-gap: 25px;
-}
-.footer-main-heading {
-    font-size: 26px;
-}
-.footer-socials {
-    font-size: 18.5px;
-}
-.footer-socials__strong-text {
-    font-size: 20px;
-}
-.footer-socials__strong-text:hover {
-    border-bottom: 1px solid #00f;
 }
 @media (max-width: 1640px) {
     .for-what__cards-container {
